@@ -22,13 +22,19 @@
 	                        g.fillRect(x1, y1, width + 1, height + 1);
 	                        //g.fillRect(x1, y1, width, height);
 	                        
-	                      //Draw a border
-	                        g.setColor(Color.YELLOW);
-	                        g.drawRect(x1, y1, width, height);
+//	                      //Draw a border
+//	                        g.setColor(Color.YELLOW);
+//	                        g.drawRect(x1, y1, width, height);
+//	                        
+//	                      //Draw an inside border
+//	                        g.setColor(Color.CYAN);
+//	                        g.drawRect(x1 + 4, y1 + 4, width - 8, height - 8);
+//	                        
+//	                        g.setColor(Color.WHITE);
+//	                        g.drawLine(x1, y1, x2, y2);
 	                        
-	                      //Draw an inside border
-	                        g.setColor(Color.CYAN);
-	                        g.drawRect(x1 + 4, y1 + 4, width - 8, height - 8);
+	                        g.setColor(Color.LIGHT_GRAY);
+	                        g.fillOval((width-55)/2, (height-55)/2, 55, 55);
 	            }
 	}
 
