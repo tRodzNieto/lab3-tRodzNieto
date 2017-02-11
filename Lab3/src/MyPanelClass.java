@@ -19,7 +19,7 @@
 	                        int height = y2 - y1;
 	 
 	                        //Paint the background
-	                        g.setColor(Color.DARK_GRAY);
+	                        g.setColor(Color.RED);
 	                        g.fillRect(x1, y1, width + 1, height + 1);
 	                        //g.fillRect(x1, y1, width, height);
 	                        
@@ -32,7 +32,7 @@
 //	                        g.drawRect(x1 + 4, y1 + 4, width - 8, height - 8);
 //	                        
 //	                        g.setColor(Color.WHITE);
-//	                        g.drawLine(x1, y1, x2, y2);
+//	                        g.drawLine(x1, y1, x2/2, y2/2);
 	                        
 //	                        g.setColor(Color.LIGHT_GRAY);
 //	                        g.fillOval((width-55)/2, (height-55)/2, 55, 55);
@@ -48,6 +48,22 @@
 //	                        g.setColor(Color.YELLOW);
 //	                        g.fillPolygon(p);
 	                        
+	                        //Franjas
+	                        g.setColor(Color.WHITE);
+	                        g.fillRect(x1, y1 + 32, width, 32);
+	                        
+	                        g.setColor(Color.WHITE);
+	                        g.fillRect(x1, y1 + 97, width, 32);
+	                        
+	                        //Triangulo
+	                        Polygon p = new Polygon();
+	                        p.addPoint(x1, y1);
+	                        p.addPoint(x2/2, y2/2);
+	                        p.addPoint(x1, y2);
+	                        g.setColor(Color.BLUE);
+	                        g.fillPolygon(p);
+	                        
+	                        //Star                    
 	                        Polygon p2 = new Polygon();
 	                        p2.addPoint(x1 + 25, y1 + 73);
 	                        p2.addPoint(x1 + 41, y1 + 73);
@@ -60,7 +76,7 @@
 	                        p2.addPoint(x1 + 34, y1 + 98);
 	                        p2.addPoint(x1 + 38, y1 + 83);
 	                        g.setColor(Color.WHITE);
-	                        g.drawPolygon(p2);
+	                        g.fillPolygon(p2);
 	            }
 	}
 
